@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Tweet from './App';
 import reportWebVitals from './reportWebVitals';
 
+const testTweet = {
+  message: "Something about cats.",
+  gravatar: "xyz",
+  author: {
+  handle: "catperson",
+  name: "IAMA Cat Person"
+  },
+  likes: 5,
+  retweets: 5,
+  timestamp: "2016-07-30 21:24:37"
+  };
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Tweet  tweet={testTweet}/>,
   document.getElementById('root')
 );
 
